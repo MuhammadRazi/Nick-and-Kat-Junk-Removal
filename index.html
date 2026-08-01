@@ -22,7 +22,7 @@
    Match or Beat Any Quote, Guaranteed · Open 24/7.
    BLACK + ORANGE (#F18104) + WHITE. Alternating dark / light
    sections, real job photography, real logo, real before/afters,
-   and Gracie (their real giraffe) in her own section. Estimator
+   and real before/afters. Estimator
    captures the job by text/email — never shows a price.
    ============================================================ */
 :root{
@@ -123,7 +123,7 @@ h3{font-size:21px}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,9,10,.96) 0%,rgba(8,9,10,.82) 48%,rgba(8,9,10,.5) 100%),linear-gradient(0deg,var(--panel) 2%,transparent 42%)}
-.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:center;padding:88px 0}
+.hero-in{position:relative;z-index:1;padding:92px 0}
 .hero-pill{display:inline-flex;align-items:center;gap:9px;background:rgba(241,129,4,.16);border:1px solid rgba(241,129,4,.5);color:#fff;font-weight:600;font-size:12.5px;letter-spacing:.04em;padding:8px 15px;border-radius:100px;text-transform:uppercase}
 .hero-pill .ico{width:15px;height:15px;stroke-width:2.4;color:var(--orange-l)}
 .hero h1{margin-top:18px;font-size:clamp(42px,7vw,82px);line-height:.96;color:#fff;max-width:14ch;letter-spacing:-.02em}
@@ -134,13 +134,6 @@ h3{font-size:21px}
 .hero .mini{margin-top:22px;display:flex;gap:20px;flex-wrap:wrap}
 .hero .mini .m{display:flex;align-items:center;gap:8px;font-size:13.5px;color:#CFD2D3;font-weight:500}
 .hero .mini .m .ico{width:17px;height:17px;color:var(--orange-l);stroke-width:2.4}
-.hero-card{background:rgba(14,15,16,.74);border:1px solid var(--dline);border-radius:16px;padding:24px;backdrop-filter:blur(6px)}
-.hero-card .gic{width:46px;height:46px;border-radius:12px;background:rgba(241,129,4,.16);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.hero-card .gic .ico{width:26px;height:26px;color:var(--orange-l);stroke-width:2}
-.hero-card b{display:block;font-family:'Sora',sans-serif;font-weight:800;color:#fff;font-size:20px;line-height:1.1}
-.hero-card p{margin-top:8px;font-size:14px;color:var(--dmuted)}
-.hero-card .fine{margin-top:12px;padding-top:12px;border-top:1px solid var(--dline);font-size:12.5px;color:var(--orange-l);font-weight:700;letter-spacing:.02em}
-@media(max-width:900px){.hero-card{display:none}.hero-in{grid-template-columns:1fr}}
 @media(max-width:640px){.hero-in{padding:52px 0 56px}.hero .sub{font-size:16px}}
 
 /* BADGES */
@@ -209,7 +202,8 @@ h3{font-size:21px}
 
 /* BEFORE/AFTER */
 .ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:820px){.ba-wrap{grid-template-columns:1fr;gap:28px}}
+.ba-wrap + .ba-wrap{margin-top:64px}
+@media(max-width:820px){.ba-wrap{grid-template-columns:1fr;gap:28px}.ba-wrap + .ba-wrap{margin-top:44px}}
 .ba{position:relative;aspect-ratio:16/11;border-radius:16px;overflow:hidden;border:1px solid var(--dline);user-select:none;box-shadow:0 24px 54px -28px rgba(0,0,0,.6);max-width:560px;width:100%;margin:0 auto}
 .ba>img.base{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ba-after{position:absolute;inset:0}
@@ -244,17 +238,20 @@ h3{font-size:21px}
 .gal button:hover img{transform:scale(1.05)}
 @media(max-width:640px){.gal{grid-template-columns:1fr 1fr}}
 
-/* GRACIE */
-.gracie-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-@media(max-width:860px){.gracie-grid{grid-template-columns:1fr;gap:30px}}
-.gracie-media{border-radius:16px;overflow:hidden;border:1px solid var(--dline);box-shadow:0 24px 54px -30px rgba(0,0,0,.6)}
-.gracie-media img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.gracie h2{color:#fff}
-.gracie .lead{color:var(--dmuted)}
-.gracie-pts{margin-top:22px;display:grid;gap:13px}
-.gracie-pt{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--dmuted)}
-.gracie-pt .ico{width:20px;height:20px;color:var(--orange-l);stroke-width:2.4;flex-shrink:0;margin-top:3px}
-.gracie-pt b{color:#fff;font-weight:600}
+/* WHO WE ARE */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:30px}}
+.about-media{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--dline);box-shadow:0 24px 54px -30px rgba(0,0,0,.6)}
+.about-media img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.about-media .ov{position:absolute;left:16px;bottom:16px;background:var(--panel);color:#fff;border-radius:10px;padding:11px 16px;border:1px solid var(--dline)}
+.about-media .ov b{color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:16px;display:block;line-height:1.1}
+.about-media .ov span{display:block;font-size:11.5px;color:var(--orange-l);margin-top:2px}
+.about h2{color:#fff}
+.about .lead{color:var(--dmuted)}
+.about-pts{margin-top:22px;display:grid;gap:13px}
+.about-pt{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--dmuted)}
+.about-pt .ico{width:20px;height:20px;color:var(--orange-l);stroke-width:2.4;flex-shrink:0;margin-top:3px}
+.about-pt b{color:#fff;font-weight:600}
 
 /* AREA + MAP */
 .area-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
@@ -408,7 +405,7 @@ footer a{color:#8B9095}footer a:hover{color:#fff}
       <a href="#quote">Free Quote</a>
       <a href="#services">Services</a>
       <a href="#work">Before &amp; After</a>
-      <a href="#gracie">Meet Gracie</a>
+      <a href="#about">About</a>
       <a href="#area">Area</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -437,12 +434,6 @@ footer a{color:#8B9095}footer a:hover{color:#fff}
         <div class="m"><svg class="ico"><use href="#i-tag"/></svg>We Work With Budgets</div>
         <div class="m"><svg class="ico"><use href="#i-clock"/></svg>Open 24/7</div>
       </div>
-    </div>
-    <div class="hero-card">
-      <div class="gic"><svg class="ico"><use href="#i-shield"/></svg></div>
-      <b>Match or Beat Any Quote</b>
-      <p>Got a price from someone else? Send it our way — we'll match it or beat it, guaranteed.</p>
-      <div class="fine">FREE QUOTES · NO OBLIGATION</div>
     </div>
   </div>
 </section>
@@ -538,20 +529,43 @@ footer a{color:#8B9095}footer a:hover{color:#fff}
 
 <!-- BEFORE / AFTER -->
 <section class="band dark" id="work" style="background:var(--panel-2)">
-  <div class="wrap ba-wrap">
-    <div class="ba" id="ba">
-      <img class="base" src="images/before.jpg" alt="Overgrown backyard full of debris before Nick and Kat's cleared it">
-      <div class="ba-after" id="baAfter"><img src="images/after.jpg" alt="The same backyard cleared out and cleaned up afterward"></div>
-      <span class="ba-lab a">After</span>
-      <span class="ba-lab b">Before</span>
-      <div class="ba-div" id="baDiv"><div class="ba-handle"><svg class="ico"><use href="#i-arrows"/></svg></div></div>
-      <input type="range" min="0" max="100" value="50" class="ba-range" id="baRange" aria-label="Drag to compare before and after">
-    </div>
-    <div class="ba-cap">
+  <div class="wrap">
+    <div class="head" style="margin-bottom:44px">
       <span class="eyebrow">Before &amp; After</span>
-      <h2>See the difference</h2>
-      <p>A real backyard cleanout right here in the Uvalde area — debris cleared, brush gone, and the whole space opened back up. Drag the slider to see it.</p>
-      <span class="hint"><svg class="ico"><use href="#i-arrows"/></svg>Drag to reveal</span>
+      <h2>Real jobs, real results</h2>
+      <p class="lead">A couple of real jobs from right here in the Uvalde area. Drag the sliders to see the difference.</p>
+    </div>
+    <div class="ba-wrap">
+      <div class="ba">
+        <img class="base" src="images/before.jpg" alt="Overgrown backyard full of debris before Nick and Kat's cleared it">
+        <div class="ba-after"><img src="images/after.jpg" alt="The same backyard cleared out and cleaned up afterward"></div>
+        <span class="ba-lab a">After</span>
+        <span class="ba-lab b">Before</span>
+        <div class="ba-div"><div class="ba-handle"><svg class="ico"><use href="#i-arrows"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Drag to compare the backyard before and after">
+      </div>
+      <div class="ba-cap">
+        <span class="eyebrow">Backyard cleanout</span>
+        <h2>Cleared &amp; hauled off</h2>
+        <p>A backyard packed with debris and brush — hauled off and opened right back up, leaving a clean, usable space behind.</p>
+        <span class="hint"><svg class="ico"><use href="#i-arrows"/></svg>Drag to reveal</span>
+      </div>
+    </div>
+    <div class="ba-wrap">
+      <div class="ba-cap">
+        <span class="eyebrow">Property cleanup</span>
+        <h2>Junk gone, lot mowed</h2>
+        <p>An overgrown lot piled with junk — cleared out and mowed down in one visit, so the whole property looks cared for again.</p>
+        <span class="hint"><svg class="ico"><use href="#i-arrows"/></svg>Drag to reveal</span>
+      </div>
+      <div class="ba">
+        <img class="base" src="images/before2.jpg" alt="Overgrown lot piled with old junk before service">
+        <div class="ba-after"><img src="images/after2.jpg" alt="The same lot cleared of junk and freshly mowed afterward"></div>
+        <span class="ba-lab a">After</span>
+        <span class="ba-lab b">Before</span>
+        <div class="ba-div"><div class="ba-handle"><svg class="ico"><use href="#i-arrows"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Drag to compare the lot before and after">
+      </div>
     </div>
   </div>
 </section>
@@ -579,28 +593,29 @@ footer a{color:#8B9095}footer a:hover{color:#fff}
       <p class="lead">A look at the kind of jobs we knock out around Uvalde — hauling, cleanouts, construction debris, and lawn care.</p>
     </div>
     <div class="gal">
-      <button onclick="openLB(0)"><img src="images/work1.jpg" alt="Dump trailer loaded with heavy construction and concrete debris"></button>
-      <button onclick="openLB(1)"><img src="images/work2.jpg" alt="Cleared backyard and driveway after a full cleanout"></button>
-      <button onclick="openLB(2)"><img src="images/work3.jpg" alt="Freshly mowed and cleaned-up lawn after service"></button>
+      <button onclick="openLB(0)"><img src="images/work1.jpg" alt="Shed packed full of clutter before a cleanout"></button>
+      <button onclick="openLB(1)"><img src="images/work2.jpg" alt="The same shed emptied and swept clean after the cleanout"></button>
+      <button onclick="openLB(2)"><img src="images/work3.jpg" alt="Dump trailer loaded with heavy construction and concrete debris"></button>
     </div>
   </div>
 </section>
 
-<!-- MEET GRACIE -->
-<section class="band dark" id="gracie" style="background:var(--panel-2)">
-  <div class="wrap gracie-grid">
-    <div class="gracie-media rv">
-      <img src="images/gracie.jpg" alt="Gracie the giraffe perched on Nick and Kat's loaded dump trailer">
+<!-- WHO WE ARE -->
+<section class="band dark" id="about" style="background:var(--panel-2)">
+  <div class="wrap about-grid">
+    <div class="about-media rv">
+      <img src="images/about.jpg" alt="Nick and Kat's truck and dump trailer ready for a job in Uvalde, Texas">
+      <div class="ov"><b>Nick &amp; Kat's Junk Removal</b><span>You Call, We Haul!</span></div>
     </div>
-    <div class="gracie">
-      <span class="eyebrow">Meet Gracie</span>
-      <h2 style="margin-top:12px">Our tallest team member</h2>
-      <p class="lead">You might spot Gracie riding along on the trailer — our unofficial mascot and full-time supervisor. The real heavy lifting is done by Nick, Kat &amp; the crew: a local, family-run team that treats your property like their own.</p>
-      <div class="gracie-pts">
-        <div class="gracie-pt"><svg class="ico"><use href="#i-heart"/></svg><span><b>Locally &amp; family owned</b> — Nick &amp; Kat, right here in Uvalde.</span></div>
-        <div class="gracie-pt"><svg class="ico"><use href="#i-shield"/></svg><span><b>Match or beat any quote</b> — guaranteed, with free quotes every time.</span></div>
-        <div class="gracie-pt"><svg class="ico"><use href="#i-tag"/></svg><span><b>We work with budgets</b> — fair, honest pricing on every job.</span></div>
-        <div class="gracie-pt"><svg class="ico"><use href="#i-bolt"/></svg><span><b>Fast &amp; friendly</b> — we show up, haul it, and leave it clean.</span></div>
+    <div class="about">
+      <span class="eyebrow">Who We Are</span>
+      <h2 style="margin-top:12px">Locally owned &amp; operated</h2>
+      <p class="lead">Nick &amp; Kat's Junk Removal is a local, family-run business serving Uvalde and the surrounding counties. From a single item to a full property, we handle junk removal, hauling, cleanouts, construction debris, light demolition, and lawn care — fast, affordable, and done right.</p>
+      <div class="about-pts">
+        <div class="about-pt"><svg class="ico"><use href="#i-heart"/></svg><span><b>Locally &amp; family owned</b> — Nick &amp; Kat, based right here in Uvalde, TX.</span></div>
+        <div class="about-pt"><svg class="ico"><use href="#i-shield"/></svg><span><b>Free quotes, fair prices</b> — we work with budgets and match or beat any quote.</span></div>
+        <div class="about-pt"><svg class="ico"><use href="#i-truck"/></svg><span><b>Full service</b> — junk, hauling, cleanouts, demolition &amp; lawn care in one call.</span></div>
+        <div class="about-pt"><svg class="ico"><use href="#i-clock"/></svg><span><b>Available 24/7</b> — we show up, do the heavy lifting, and leave it clean.</span></div>
       </div>
     </div>
   </div>
@@ -844,18 +859,20 @@ footer a{color:#8B9095}footer a:hover{color:#fff}
     }else{els.forEach(function(el){el.classList.add('in');});}
   });
 
-  /* 05 — before/after slider */
+  /* 05 — before/after sliders (handles any number) */
   safe('05-slider',function(){
-    var range=$('baRange'),after=$('baAfter'),div=$('baDiv');
-    if(!range||!after||!div)return;
-    function set(v){after.style.clipPath='inset(0 '+(100-v)+'% 0 0)';div.style.left=v+'%';}
-    range.addEventListener('input',function(){set(+range.value);});
-    set(50);
+    document.querySelectorAll('.ba').forEach(function(ba){
+      var range=ba.querySelector('.ba-range'),after=ba.querySelector('.ba-after'),div=ba.querySelector('.ba-div');
+      if(!range||!after||!div)return;
+      function set(v){after.style.clipPath='inset(0 '+(100-v)+'% 0 0)';div.style.left=v+'%';}
+      range.addEventListener('input',function(){set(+range.value);});
+      set(50);
+    });
   });
 
   /* 06 — lightbox */
   var LB=['images/work1.jpg','images/work2.jpg','images/work3.jpg'];
-  var LBA=['Dump trailer loaded with heavy construction debris','Cleared backyard after a full cleanout','Freshly mowed lawn after service'];
+  var LBA=['Shed packed full of clutter before a cleanout','The same shed emptied and swept clean','Dump trailer loaded with heavy construction debris'];
   window.openLB=function(i){var im=$('lbImg');if(!im)return;im.src=LB[i];im.alt=LBA[i];$('lb').style.display='flex';};
   window.closeLB=function(){var lb=$('lb');if(lb)lb.style.display='none';};
 
